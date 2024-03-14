@@ -1,5 +1,5 @@
 import XCTest
-@testable import OpenCC
+@testable import SwiftyOpenCC
 
 let testCases: [(String, ChineseConverter.Options)] = [
     ("s2t", [.traditionalize]),
