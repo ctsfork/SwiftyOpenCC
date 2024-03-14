@@ -17,7 +17,7 @@ Swift port of [Open Chinese Convert](https://github.com/BYVoid/OpenCC)
 .package(url: "https://github.com/ctsfork/SwiftyOpenCC.git", from: "1.1.7"),
 
 //Targets 
-.product(name: "OpenCC", package: "SwiftyOpenCC"),//Package Product:OpenCC
+.product(name: "SwiftyOpenCC", package: "SwiftyOpenCC"),//Package Product:OpenCC
 ```
 
 ## Usage
