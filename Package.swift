@@ -60,6 +60,8 @@ let package = Package(
                 "src/TestUtilsUTF8.hpp",
                 "src/TextDictTestBase.hpp",
                 "src/py_opencc.cpp",
+//                "src/opencc_config.h",
+                "src/opencc_config.h.in",
 
                 
                 // ???
@@ -77,7 +79,7 @@ let package = Package(
             ],
             cxxSettings: [
                 .headerSearchPath("src"),
-                .headerSearchPath("configure"),
+                .headerSearchPath("node"),
                 .headerSearchPath("deps/darts-clone"),
                 .headerSearchPath("deps/marisa-0.2.6/include"),
                 .headerSearchPath("deps/marisa-0.2.6/lib"),
