@@ -82,7 +82,7 @@ cp -rf ./OpenCC/build/rel/data/*.txt ./Sources/SwiftyOpenCC/Dictionary/
 5. Copy Header to ./OpenCC/src/
 ```
 cp -rf ./OpenCC/build/rel/src/opencc_config.h ./OpenCC/src/opencc_config.h 
-cp -rf ./OpenCC/build/rel/src/Opencc_Export.h ./OpenCC/src/Opencc_Export.h 
+<!-- cp -rf ./OpenCC/build/rel/src/Opencc_Export.h ./OpenCC/src/Opencc_Export.h  -->
 ```
 
 6. 根据新检出的OpenCC版本，修改Package.swift的配置
