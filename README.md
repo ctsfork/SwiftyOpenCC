@@ -98,6 +98,10 @@ cp -rf ./OpenCC/build/rel/src/opencc_config.h ./OpenCC/src/opencc_config.h
 
 
 
+## 其它
+https://github.com/gewill/SwiftyOpenCC.git
+
+
 
 ## License
 
