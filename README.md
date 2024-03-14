@@ -77,9 +77,11 @@ git submodule update --remote
 ```
 cd ..
 cp -rf ./OpenCC/build/rel/data/*.ocd2 ./Sources/SwiftyOpenCC/Dictionary/
+cp -rf ./OpenCC/build/rel/data/*.txt ./Sources/SwiftyOpenCC/Dictionary/
 ```
-5. Copy ./OpenCC/build/rel/src/Opencc_Export.h to ./OpenCC/src/Opencc_Export.h
+5. Copy Header to ./OpenCC/src/
 ```
+cp -rf ./OpenCC/build/rel/src/opencc_config.h ./OpenCC/src/opencc_config.h 
 cp -rf ./OpenCC/build/rel/src/Opencc_Export.h ./OpenCC/src/Opencc_Export.h 
 ```
 

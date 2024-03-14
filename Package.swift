@@ -87,8 +87,6 @@ let package = Package(
                 "src/Lexicon.hpp",
                 "src/MarisaDict.hpp",
                 "src/MaxMatchSegmentation.hpp",
-                "src/Opencc_Export.h",
-                "src/opencc.h",
                 "src/Optional.hpp",
                 "src/PhraseExtract.hpp",
                 "src/Segmentation.hpp",
@@ -104,12 +102,17 @@ let package = Package(
                 "src/UTF8Util.hpp",
 
 
+                "src/opencc_config.h",
+                "src/Opencc_Export.h",
+                "src/opencc.h",
+                "src/opencc_config.h.in",
+
 
                 "deps/darts-clone",
                 "deps/google-benchmark",
-                "deps/gtest-1.11.0",
+                "deps/gtest-1.12.1",
                 "deps/marisa-0.2.6",
-                "deps/pybind11-2.5.0",
+                "deps/pybind11-2.10.0",
                 "deps/rapidjson-1.1.0",
                 "deps/tclap-1.2.2",
 
@@ -133,6 +136,7 @@ let package = Package(
                 .headerSearchPath("deps/darts-clone"),
                 .headerSearchPath("deps/marisa-0.2.6/include"),
                 .headerSearchPath("deps/marisa-0.2.6/lib"),
+                //ENABLE_DARTS  or  OPENCC_ENABLE_DARTS
                 .define("ENABLE_DARTS"),
             ]),
     ],
