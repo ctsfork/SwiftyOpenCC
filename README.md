@@ -25,7 +25,8 @@ Swift port of [Open Chinese Convert](https://github.com/BYVoid/OpenCC)
 ### Quick Start
 
 ```swift
-import OpenCC
+import SwiftyOpenCC
+
 
 let str = "鼠标里面的硅二极管坏了，导致光标分辨率降低。"
 let converter = try! ChineseConverter(options: [.traditionalize, .twStandard, .twIdiom])
@@ -41,13 +42,22 @@ converter.convert(str)
 
 ```
 
+## 警告⚠️⚠️
+ChineseConverter存在内存泄漏的问题，在大量使用ChineseConverter对象转换时，建议使用单利 \
+\
+\
+缘由：在我的一个项目中的一个静态方法中大量使用ChineseConverter对应引发的内存泄漏问题。 \
+在未使用单利时：项目消耗内存个多G \
+使用单利时：只消耗了100多M的内存。
+
+
+
+
 ## Documentation
 
 [Github Pages](http://ddddxxx.github.io/SwiftyOpenCC) (100% Documented)
 
-## License
 
-SwiftyOpenCC is available under the MIT license. See the [LICENSE file](LICENSE).
 
 
 
@@ -77,16 +87,19 @@ git submodule update --remote
 ```
 cd ..
 cp -rf ./OpenCC/build/rel/data/*.ocd2 ./Sources/SwiftyOpenCC/Dictionary/
-cp -rf ./OpenCC/build/rel/data/*.txt ./Sources/SwiftyOpenCC/Dictionary/
 ```
-5. Copy Header to ./OpenCC/src/
+5. ***Copy Header to ./OpenCC/src/  ⚠️⚠️：注意当前已不再需要拷贝opencc_config.h 文件了***
 ```
 cp -rf ./OpenCC/build/rel/src/opencc_config.h ./OpenCC/src/opencc_config.h 
-<!-- cp -rf ./OpenCC/build/rel/src/Opencc_Export.h ./OpenCC/src/Opencc_Export.h  -->
 ```
 
-6. 根据新检出的OpenCC版本，修改Package.swift的配置
 
-7. Run test in Xcode: Cmd+U
+6. Run test in Xcode: Cmd+U
 
+
+
+
+## License
+
+SwiftyOpenCC is available under the MIT license. See the [LICENSE file](LICENSE).
 
