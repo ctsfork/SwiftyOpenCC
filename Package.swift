@@ -137,7 +137,7 @@ let package = Package(
                 .headerSearchPath("deps/marisa-0.2.6/include"),
                 .headerSearchPath("deps/marisa-0.2.6/lib"),
                 //ENABLE_DARTS  or  OPENCC_ENABLE_DARTS
-                .define("ENABLE_DARTS"),
+                .define("OPENCC_ENABLE_DARTS"),
             ]),
     ],
     cxxLanguageStandard: .cxx14
